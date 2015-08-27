@@ -1,4 +1,5 @@
-var app = angular.module('posts-workshop', ['ngRoute'])
+var app = angular.module('posts-workshop', ['ngRoute']);
+
 
 app.controller('ApplicationController', ['$scope', function($scope) {
   $scope.application= 'Hello!';
