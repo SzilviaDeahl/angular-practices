@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.min.js'></script>
     <script type="text/javascript" src='./app.js'></script>
     <title></title>
   </head>
-  <body ng-controller='ApplicationController' {{ application }}>
+  <body ng-controller='ApplicationController'>
+    <div data-ng-include data-ng-src="getPartial()"></div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -65,5 +67,6 @@
       {{ 1 + 2 }}
       {{ application }}
     </p>
+    <div ng-view></div>
   </body>
 </html>
