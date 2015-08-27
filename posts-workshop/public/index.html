@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='posts-workshop'>
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+    <script type="text/javascript" src='./app.js'></script>
     <title></title>
   </head>
-  <body>
+  <body ng-controller='ApplicationController' {{ application }}>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,6 +63,7 @@
   </nav>
     <p>
       {{ 1 + 2 }}
+      {{ application }}
     </p>
   </body>
 </html>
