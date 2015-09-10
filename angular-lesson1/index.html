@@ -22,6 +22,10 @@
     <p>My name is {{"BoJack" + " Horseman"}}</p>
     <p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
     <p>{{3.1459265359 | currency:'€'}}</p>
+    <p>Please say something</p>
+    <input type='text' ng-model='something'>
+    <p>Yelling: {{ something | uppercase }}</p>
+    <p>Whispering:{{ something | lowercase}}</p>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
   </body>
 </html>
