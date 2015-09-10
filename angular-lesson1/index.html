@@ -12,6 +12,15 @@
     <input type="text" placeholder="What is your name?" ng-model="name">
     <input type="text" placeholder="What is your name?" ng-model="greeting">
     <h1>My name is: {{name}}</h1>
+    <select ng-model='string'>
+      <option value='Dog'>Dogs</option>
+      <option value='Cat'>Cats</option>
+      <option value='Dogs and Cats'>Dogs and Cats</option>
+      <option value='Neither'>Neither</option>
+    </select>
+    <p>1 + 2 = {{1 + 2}}</p>
+    <p>My name is {{"BoJack" + " Horseman"}}</p>
+    <p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
   </body>
 </html>
