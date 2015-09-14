@@ -5,7 +5,7 @@
     <title>{{ greeting }} World</title>
   </head>
   <body >
-    <p>{{1 + 6}}<p>
+    <!-- <p>{{1 + 6}}<p>
     <br>
     <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
     <p>{{ greeting }} world!</p>
@@ -28,14 +28,13 @@
     <p>Whispering: {{ something | lowercase}}</p>
     <p>{{3.14159265359 | number:3}}</p>
     <p>{{3.14159265359 | number:6}}</p>
-    <p>{{3.14159265359 | number:1}}</p>
+    <p>{{3.14159265359 | number:1}}</p> -->
     <p>How many digits of pi do you want?</p>
     <p>Here you go! You're first {{digits}}
     <ng-pluralize count="digits"
                  when="{'1': 'digit',
                      'other': 'digits'}">
-    </ng-pluralize>
-     of pi:</p>
+    </ng-pluralize> of pi:</p>
     <select ng-model='digits'>
       <option value=1>1</option>
       <option value=2>2</option>
