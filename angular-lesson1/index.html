@@ -30,7 +30,12 @@
     <p>{{3.14159265359 | number:6}}</p>
     <p>{{3.14159265359 | number:1}}</p>
     <p>How many digits of pi do you want?</p>
-    <p>Here you go! You're first {{digits}} digits of pi:</p>
+    <p>Here you go! You're first {{digits}}
+    <ng-pluralize count="digits"
+                 when="{'1': 'digit',
+                     'other': 'digits'}">
+    </ng-pluralize>
+     of pi:</p>
     <select ng-model='digits'>
       <option value=1>1</option>
       <option value=2>2</option>
