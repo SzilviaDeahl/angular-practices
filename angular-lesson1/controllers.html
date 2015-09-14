@@ -5,9 +5,15 @@
     <title>Controllers</title>
   </head>
   <body>
-    <div ng-controller="MyFirstController">
+    <!-- <div ng-controller="MyFirstController">
     <input type="text" placeholder="What is your name?" ng-model="name">
     <h1>My name is: {{name}}</h1>
+    </div> -->
+    <div ng-controller='ExercisesController'>
+      <input type='text' placeholder="What is your favorite color?" ng-model='FavColor'>
+      <h1> My Favorite color is: {{FavColor}}</h1>
+      <h3> How many seconds are in a century? </h3>
+      <p>There are {{secondsInACentury | number}} seconds in a centurry.</p>
     </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
   <script type="text/javascript" src='app.js'></script>
