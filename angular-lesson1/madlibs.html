@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <title>Mad Libs</title>
   </head>
   <body>
     <h1>Please fill out the form below!</h1>
+    <form>
+      <label id='name'>Boy's name: </label>
+      <br>
+      <br>
+      <input type='text' ng-model='name' placeholder="Enter a boy's name..."></input>
+      <br>
+      <br>
+      <label id='adjective'>Adjective </label>
+      <br>
+      <br>
+      <input type='text' ng-model='adj' placeholder="Enter an adjective..."></input>
+      <br>
+      <br>
+      <label id='plural'>Plural noun </label>
+      <br>
+      <br>
+      <input type='text' ng-model='plural' placeholder="Enter a plural noun...">
+      <br>
+      <br>
+      <label id='insect'>An insect, plural</label>
+      <br>
+      <br>
+      <input type='text' ng-model='insect' placeholder="Enter an insect, plural..."></input>
+      <br>
+      <br>
+      <label id='plural2'>Plural noun </label>
+      <br>
+      <br>
+      <input type='text' ng-model='plural2' placeholder="Enter a plural noun...">
+      <br>
+      <br>
+      <label id='verb'>A verb ending in 's'</label>
+      <br>
+      <br>
+      <input type='text' ng-model='verb' placeholder="Enter a verb ending in s..."></input>
+      <br>
+      <br>
+      <input type='submit' ng-model='submit' value='Generate'></input>
+      <h3>I'm in love with {{name}}<span>
+      </span>. He's so {{adj}}<span>
+        </span>! He has big flat {{plural}}<span>
+        </span>, and when our {{insect}}<spant>
+        </span>meet, I get {{plural2}}<span>
+        </span>in my stomach. I've fallen for him like a ton of {{verb}}<span>
+        </span>, and he shuffles for me, too. But I think he's got another girlfriend.What should I do?</h3>
 
-    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
   </body>
 </html>
