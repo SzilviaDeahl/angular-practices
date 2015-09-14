@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='firstApp'>
   <head>
     <meta charset="utf-8">
     <title>{{ greeting }} World</title>
   </head>
   <body >
-    <!-- <p>{{1 + 6}}<p>
+    <p>{{1 + 6}}<p>
     <br>
     <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
     <p>{{ greeting }} world!</p>
+    <div ng-controller="MyFirstController">
     <input type="text" placeholder="What is your name?" ng-model="name">
-    <input type="text" placeholder="What is your name?" ng-model="greeting">
     <h1>My name is: {{name}}</h1>
+    </div>
+    <input type="text" placeholder="What is your name?" ng-model="greeting">
     <select ng-model='string'>
       <option value='Dog'>Dogs</option>
       <option value='Cat'>Cats</option>
@@ -28,7 +30,7 @@
     <p>Whispering: {{ something | lowercase}}</p>
     <p>{{3.14159265359 | number:3}}</p>
     <p>{{3.14159265359 | number:6}}</p>
-    <p>{{3.14159265359 | number:1}}</p> -->
+    <p>{{3.14159265359 | number:1}}</p>
     <p>How many digits of pi do you want?</p>
     <p>Here you go! You're first {{digits}}
     <ng-pluralize count="digits"
@@ -47,5 +49,6 @@
     </select>
     <p>{{3.14159265359}}
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <script type="text/javascript" src='app.js'></script>
   </body>
 </html>
