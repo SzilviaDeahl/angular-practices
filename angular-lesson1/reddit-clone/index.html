@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='reddit-clone'>
   <head>
     <meta charset="utf-8">
     <title>Reddit Clone</title>
     <link rel="stylesheet" href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href='app.css'>
   </head>
-  <body>
+  <body ng-controller='ApplicationController'>
     <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,17 +17,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#">g | reddit</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+          <li class="active"><a href="#" ng-click='toggleForm()'><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Submit Post</a></li>
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> -->
+            <!-- <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
@@ -34,8 +34,8 @@
               <li><a href="#">Separated link</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+            </ul> -->
+          <!-- </li> -->
         </ul>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
@@ -60,9 +60,47 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-    {{ 1 + 2 }}
+  <div class="container">
+    <div>
+    <form ng-show="showForm">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input ng-model="post.title" type="text" class="form-control" id="title" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input ng-model='post.author' type="text" class="form-control" id="author" placeholder="Author">
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input ng-model='post.image' type="text" class="form-control" id="image" placeholder="Image">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input ng-model='post.description' type="text" class="form-control" id="description" placeholder="Description">
+      </div>
+
+      <button ng-click  ='submitPost()' type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+    <div ng-repeat='post in posts'>
+      <div class="well">
+        <p>
+        <img class="thumbnail" ng-src='{{post.image}}' />
+        <h3>{{post.title}} <small>posted by - {{post.author}}</small></h3>
+        {{post.author}}
+        {{post.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+
 
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src='app.js'>
+
+  </script>
 
   </body>
 </html>
