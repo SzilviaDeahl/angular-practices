@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='myApp'>
   <head>
     <meta charset="utf-8">
     <title>Mad Libs</title>
   </head>
   <body>
     <h1>Please fill out the form below!</h1>
-    <form>
+    <form ng-controller='MyAppController'>
+      <p> {{ reversed }} </p>
       <label id='name'>Boy's name: </label>
       <br>
       <br>
-      <input type='text' ng-model='name' placeholder="Enter a boy's name..."></input>
+      <input type='text' ng-keyup="reverseName()" ng-model='name' placeholder="Enter a boy's name..."></input>
       <br>
       <br>
       <label id='adjective'>Adjective </label>
@@ -51,7 +52,10 @@
         </span>meet, I get {{plural2}}<span>
         </span>in my stomach. I've fallen for him like a ton of {{verb}}<span>
         </span>, and he shuffles for me, too. But I think he's got another girlfriend.What should I do?</h3>
-
+    </form>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+    <script type="text/javascript" src='main.js'>
+
+    </script>
   </body>
 </html>
